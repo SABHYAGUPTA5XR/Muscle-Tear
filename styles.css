@@ -45,7 +45,8 @@ nav ul li a {
     transition: 0.3s;
 }
 
-nav ul li a:hover, .active {
+nav ul li a:hover,
+.active {
     color: red;
 }
 
@@ -149,228 +150,228 @@ nav ul li a:hover, .active {
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(175, 0, 0);
-  }
-  
+}
 
-  /* About Intro Section */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(175, 0, 0);
+}
+
+
+/* About Intro Section */
 .about-intro {
     padding: 50px 20px;
     text-align: center;
     background: #111;
-  }
-  
-  .about-intro .container {
+}
+
+.about-intro .container {
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .about-intro h1 {
+}
+
+.about-intro h1 {
     font-size: 36px;
     margin-bottom: 20px;
     color: red;
-  }
-  
-  .about-intro p {
+}
+
+.about-intro p {
     font-size: 18px;
     line-height: 1.6;
-  }
-  
-  /* Team Section */
-  .team {
+}
+
+/* Team Section */
+.team {
     background: #222;
     padding: 50px 20px;
-  }
-  
-  .team .container {
+}
+
+.team .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .team h2 {
+}
+
+.team h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 30px;
     color: red;
-  }
-  
-  .team-grid {
+}
+
+.team-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .team-member {
+}
+
+.team-member {
     background: #333;
     padding: 20px;
     border-radius: 10px;
     width: 250px;
     text-align: center;
     transition: transform 0.3s;
-  }
-  
-  .team-member:hover {
+}
+
+.team-member:hover {
     transform: scale(1.05);
-  }
-  
-  .team-member img {
+}
+
+.team-member img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 15px;
-  }
-  
-  .team-member h3 {
+}
+
+.team-member h3 {
     font-size: 24px;
     margin-bottom: 10px;
     color: red;
-  }
-  
-  .team-member p {
+}
+
+.team-member p {
     font-size: 16px;
     color: #ccc;
-  }
-  
+}
 
-  /* Products Page */
+
+/* Products Page */
 .products {
     padding: 50px 20px;
     background: #111;
     text-align: center;
-  }
-  
-  .products .container {
+}
+
+.products .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .products h1 {
+}
+
+.products h1 {
     font-size: 36px;
     margin-bottom: 30px;
     color: red;
-  }
-  
-  .product-grid {
+}
+
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-  }
-  
-  .product-card {
+}
+
+.product-card {
     background: #222;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .product-card:hover {
+}
+
+.product-card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  }
-  
-  .product-card img {
+}
+
+.product-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  
-  .product-info {
+}
+
+.product-info {
     padding: 15px;
-  }
-  
-  .product-info h3 {
+}
+
+.product-info h3 {
     font-size: 24px;
     margin-bottom: 10px;
     color: red;
-  }
-  
-  .product-info p {
+}
+
+.product-info p {
     font-size: 20px;
     margin-bottom: 15px;
-  }
-  
-  .product-info .btn {
+}
+
+.product-info .btn {
     padding: 10px 20px;
     background: red;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
-  }
-  
-  .product-info .btn:hover {
+}
+
+.product-info .btn:hover {
     background: #fff;
     color: red;
-  }
-  
-  /* Cart Page */
+}
+
+/* Cart Page */
 .cart {
     padding: 50px 20px;
     background: #111;
     color: #fff;
-  }
-  
-  .cart .container {
+}
+
+.cart .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .cart h1 {
+}
+
+.cart h1 {
     font-size: 36px;
     color: red;
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  .cart table {
+}
+
+.cart table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
-  }
-  
-  .cart th,
-  .cart td {
+}
+
+.cart th,
+.cart td {
     padding: 15px;
     text-align: center;
     border-bottom: 1px solid #333;
-  }
-  
-  .cart img {
+}
+
+.cart img {
     width: 100px;
     height: auto;
     border-radius: 5px;
-  }
-  
-  .btn.remove-btn {
+}
+
+.btn.remove-btn {
     background: red;
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
-  }
-  
-  .btn.remove-btn:hover {
+}
+
+.btn.remove-btn:hover {
     background: #fff;
     color: red;
-  }
-  
-  .checkout {
+}
+
+.checkout {
     text-align: right;
     margin-top: 20px;
-  }
-  
-  .checkout h2 {
+}
+
+.checkout h2 {
     font-size: 28px;
     color: red;
     margin-bottom: 20px;
-  }
-  
-  .checkout .btn.checkout-btn {
+}
+
+.checkout .btn.checkout-btn {
     background: red;
     color: #fff;
     padding: 12px 25px;
@@ -378,10 +379,141 @@ nav ul li a:hover, .active {
     text-decoration: none;
     font-size: 18px;
     transition: background 0.3s;
-  }
-  
-  .checkout .btn.checkout-btn:hover {
+}
+
+.checkout .btn.checkout-btn:hover {
     background: #fff;
     color: red;
-  }
-  
+}
+
+
+/* Settings Page */
+.settings {
+    padding: 50px 20px;
+    background: #111;
+    color: #fff;
+}
+
+.settings .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.settings h1 {
+    font-size: 36px;
+    color: red;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.setting-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+}
+
+.setting-item h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: red;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-switch input[type="checkbox"] {
+    width: 50px;
+    height: 25px;
+    appearance: none;
+    background: #333;
+    outline: none;
+    border-radius: 25px;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.toggle-switch input[type="checkbox"]:checked {
+    background: red;
+}
+
+.toggle-switch input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-switch input[type="checkbox"]:checked::before {
+    transform: translateX(25px);
+}
+
+/* Font Size and Layout Options */
+.font-size-options label,
+.layout-options label {
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* Default (dark theme) styles */
+body[data-theme="dark"] {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Light theme overrides */
+body[data-theme="light"] {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Adjust navigation, buttons, etc. for light theme if needed */
+body[data-theme="light"] header {
+    background: #ddd;
+}
+
+body[data-theme="light"] .btn {
+    background: #333;
+    color: #fff;
+}
+
+body[data-theme="light"] .btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+/* List Layout for Products Page */
+.product-grid.list-layout {
+    display: block;
+}
+
+.product-grid.list-layout .product-card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-grid.list-layout .product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-grid.list-layout .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

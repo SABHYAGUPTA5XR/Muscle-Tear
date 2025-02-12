@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSCLE TEAR | Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="shortcut icon" href="assets/images/gym.png" type="image/x-icon" sizes="12x12">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">MUSCLE TEAR</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Settings Section -->
+  <section class="settings">
+    <div class="container">
+      <h1>Settings</h1>
+      <!-- Theme Toggle -->
+      <div class="setting-item">
+        <h2>Theme</h2>
+        <div class="toggle-switch">
+          <input type="checkbox" id="theme-toggle">
+          <label for="theme-toggle">Toggle Dark/Light Mode</label>
+        </div>
+      </div>
+      <!-- Font Size Options -->
+      <div class="setting-item">
+        <h2>Font Size</h2>
+        <div class="font-size-options">
+          <label>
+            <input type="radio" name="font-size" value="small"> Small
+          </label>
+          <label>
+            <input type="radio" name="font-size" value="medium" checked> Medium
+          </label>
+          <label>
+            <input type="radio" name="font-size" value="large"> Large
+          </label>
+        </div>
+      </div>
+      <!-- Layout Options -->
+      <div class="setting-item">
+        <h2>Layout</h2>
+        <div class="layout-options">
+          <label>
+            <input type="radio" name="layout" value="grid" checked> Grid
+          </label>
+          <label>
+            <input type="radio" name="layout" value="list"> List
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
