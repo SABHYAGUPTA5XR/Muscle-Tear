@@ -235,3 +235,75 @@ nav ul li a:hover, .active {
     color: #ccc;
   }
   
+
+  /* Products Page */
+.products {
+    padding: 50px 20px;
+    background: #111;
+    text-align: center;
+  }
+  
+  .products .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .products h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: red;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 15px;
+  }
+  
+  .product-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: red;
+  }
+  
+  .product-info p {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .product-info .btn {
+    padding: 10px 20px;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .product-info .btn:hover {
+    background: #fff;
+    color: red;
+  }
+  
