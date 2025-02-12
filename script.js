@@ -137,11 +137,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalElement = document.querySelector(".checkout h2");
       let total = 0;
       cart.forEach(item => {
-        const price = parseFloat(item.price.replace('$', ''));
+        const price = parseFloat(item.price.replace(/[^0-9.]/g, ''));
+
         total += price * item.quantity;
       });
       if (totalElement) {
-        totalElement.textContent = "Total: $" + total.toFixed(2);
+        totalElement.textContent = "Total: ₹" + total.toFixed(2);
       }
       // Remove item event listeners
       const removeButtons = document.querySelectorAll(".remove-btn");

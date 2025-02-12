@@ -5,66 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MUSCLE TEAR | Settings</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="shortcut icon" href="assets/images/gym.png" type="image/x-icon" sizes="12x12">
+  <style>
+    /* Updated styling for the Account Details Form */
+    .settings {
+      padding: 50px 20px;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+    }
+    .settings .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(34, 34, 34, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .settings h1 {
+      font-size: 36px;
+      color: red;
+      margin-bottom: 30px;
+    }
+    .settings form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+    .settings label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .settings input,
+    .settings textarea,
+    .settings select {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .settings button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background: red;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .settings button:hover {
+      background: #fff;
+      color: red;
+    }
+    #save-message {
+      margin-top: 20px;
+      font-size: 24px;
+      color: red;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar (consistent with other pages) -->
   <header>
     <div class="logo">MUSCLE TEAR</div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Settings Section -->
+  <!-- User Account Details Form -->
   <section class="settings">
     <div class="container">
-      <h1>Settings</h1>
-      <!-- Theme Toggle -->
-      <div class="setting-item">
-        <h2>Theme</h2>
-        <div class="toggle-switch">
-          <input type="checkbox" id="theme-toggle">
-          <label for="theme-toggle">Toggle Dark/Light Mode</label>
+      <h1>User Account Details</h1>
+      <form id="account-form">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required>
         </div>
-      </div>
-      <!-- Font Size Options -->
-      <div class="setting-item">
-        <h2>Font Size</h2>
-        <div class="font-size-options">
-          <label>
-            <input type="radio" name="font-size" value="small"> Small
-          </label>
-          <label>
-            <input type="radio" name="font-size" value="medium" checked> Medium
-          </label>
-          <label>
-            <input type="radio" name="font-size" value="large"> Large
-          </label>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="user_age" required>
         </div>
-      </div>
-      <!-- Layout Options -->
-      <div class="setting-item">
-        <h2>Layout</h2>
-        <div class="layout-options">
-          <label>
-            <input type="radio" name="layout" value="grid" checked> Grid
-          </label>
-          <label>
-            <input type="radio" name="layout" value="list"> List
-          </label>
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="user_gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
+        <div>
+          <label for="address">Address:</label>
+          <textarea id="address" name="user_address" rows="3" required></textarea>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" required>
+        </div>
+        <button type="submit" class="btn">Confirm</button>
+      </form>
+      <div id="save-message" style="display:none;">
+        <h2>Your details have been saved successfully!</h2>
       </div>
     </div>
   </section>
+
+  <script>
+    // Handle the account form submission
+    document.getElementById('account-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Here, you could add logic to save details to a server or localStorage.
+      // For this example, we simply hide the form and display a confirmation message.
+      this.style.display = 'none';
+      document.getElementById('save-message').style.display = 'block';
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

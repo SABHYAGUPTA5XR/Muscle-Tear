@@ -387,38 +387,6 @@ nav ul li a:hover,
 }
 
 
-/* Settings Page */
-.settings {
-    padding: 50px 20px;
-    background: #111;
-    color: #fff;
-}
-
-.settings .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.settings h1 {
-    font-size: 36px;
-    color: red;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.setting-item {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: #222;
-    border-radius: 10px;
-}
-
-.setting-item h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: red;
-}
-
 /* Toggle Switch Styles */
 .toggle-switch {
     display: flex;

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSCLE TEAR | User Details</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="shortcut icon" href="assets/images/gym.png" type="image/x-icon" sizes="12x12">
+  <style>
+    /* Basic styling for the User Details form */
+    .user-details {
+      padding: 50px 20px;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+    .user-details .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .user-details h1 {
+      font-size: 36px;
+      color: red;
+      margin-bottom: 30px;
+    }
+    .user-details form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      text-align: left;
+    }
+    .user-details label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .user-details input,
+    .user-details textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+    .user-details button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background: red;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .user-details button:hover {
+      background: #fff;
+      color: red;
+    }
+    #confirmation-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 24px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar (Reuse same navbar from other pages) -->
+  <header>
+    <div class="logo">MUSCLE TEAR</div>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- User Details Section -->
+  <section class="user-details">
+    <div class="container">
+      <h1>Enter Your Details</h1>
+      <form id="order-form">
+        <div>
+          <label for="name">Name:</label>
+          <!-- Note: The 'name' attributes below must match the fields in your EmailJS template -->
+          <input type="text" id="name" name="user_name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="user_email" required>
+        </div>
+        <div>
+          <label for="orderid">Order ID:</label>
+          <input type="number" id="orderID" name="user_orderID" required>
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="user_age" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <input type="text" id="message" name="user_message" required>
+        </div>
+        
+        <button type="submit" class="btn">BUY NOW</button>
+      </form>
+      <div id="confirmation-message">
+        <h2>Your order is confirmed!</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    // Initialize EmailJS with your user ID (replace 'YOUR_USER_ID' with the actual value)
+    (function(){
+      emailjs.init("oipcbWBIr3MgYhLxW");
+    })();
+  </script>
+
+  <script>
+    // Handle form submission using EmailJS
+    const orderForm = document.getElementById('order-form');
+    orderForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Send the form data via EmailJS
+      emailjs.sendForm('service_1qpm30p', 'template_qsckpqb', this)
+        .then(function() {
+          // On success, hide the form and display the confirmation message
+          orderForm.style.display = 'none';
+          document.getElementById('confirmation-message').style.display = 'block';
+        }, function(error) {
+          console.error('FAILED...', error);
+          alert('There was an error sending your order. Please try again later.');
+        });
+    });
+  </script>
+
+  <!-- Include your other site-wide scripts if any -->
+  <script src="script.js"></script>
+</body>
+</html>
