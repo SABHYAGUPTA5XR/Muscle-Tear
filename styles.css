@@ -55,7 +55,7 @@ nav ul li a:hover, .active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/myWebsite/assets/images/risen-wang-20jX9b35r_M-unsplash.jpg') no-repeat center center/cover;
+    background: url('./assets/images/bg.jpg') no-repeat center center/cover;
     text-align: center;
     position: relative;
 }
@@ -134,6 +134,7 @@ nav ul li a:hover, .active {
 
 .product img {
     width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
