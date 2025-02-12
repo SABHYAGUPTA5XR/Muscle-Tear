@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSCLE TEAR | Cart</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">MUSCLE TEAR</div>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html" class="active"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+          <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="cart">
+    <div class="container">
+      <h1>Your Cart</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example Cart Item 1 -->
+          <tr>
+            <td><img src="assets/images/protein.jpg" alt="Protein Supplement"></td>
+            <td>Protein Supplement</td>
+            <td>&#8377;2,299.00</td>
+            <td>1</td>
+            <td><a href="#" class="btn remove-btn">Remove</a></td>
+          </tr>
+          <!-- Example Cart Item 2 -->
+          <tr>
+            <td><img src="assets/images/gloves.jpg" alt="Workout Gloves"></td>
+            <td>Workout Gloves</td>
+            <td>&#8377;1,499.00</td>
+            <td>2</td>
+            <td><a href="#" class="btn remove-btn">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="checkout">
+        <h2>Total: &#8377;4,298.00</h2>
+        <a href="#" class="btn checkout-btn">Checkout</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
