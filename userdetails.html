@@ -65,6 +65,11 @@
       font-size: 24px;
       color: red;
     }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -78,7 +83,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="cart.html">Cart</a></li>
-          <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+          <li><a href="settings.html">User</a></li>
       </ul>
     </nav>
   </header>
@@ -123,7 +128,7 @@
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
-    // Initialize EmailJS with your user ID (replace 'YOUR_USER_ID' with the actual value)
+    // Initialize EmailJS with your user ID
     (function(){
       emailjs.init("oipcbWBIr3MgYhLxW");
     })();
@@ -137,7 +142,8 @@
       // Send the form data via EmailJS
       emailjs.sendForm('service_1qpm30p', 'template_qsckpqb', this)
         .then(function() {
-          // On success, hide the form and display the confirmation message
+          // On success, hide the heading and form, then display the confirmation message
+          document.querySelector('.user-details h1').style.display = 'none';
           orderForm.style.display = 'none';
           document.getElementById('confirmation-message').style.display = 'block';
         }, function(error) {
