@@ -1,5 +1,7 @@
 # MUSCLE TEAR
-
+<p align="center">
+  <img src="assets/images/heroSectionSS.png" alt="MUSCLE TEAR Website Screenshot" width="800"/>
+</p>
 MUSCLE TEAR is a premium fitness-themed e-commerce website that empowers users to push limits and break barriers with high-quality fitness gear and supplements. The website is built using HTML, CSS, and vanilla JavaScript (with localStorage for cart management and EmailJS for email integration) and is designed to be fully responsive across all devices.
 
 ## Table of Contents
