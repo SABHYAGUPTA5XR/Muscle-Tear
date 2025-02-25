@@ -185,12 +185,58 @@
       <div class="rating-quantity">
         <p class="rating">Rating: ★★★★☆</p>
       </div>
-      <a href="#" class="buy-button">Buy Now</a>
+      <a href="#" class="buy-button add-to-cart" data-name="workoutGloves" data-price="₹1,499"
+        data-image="assets/images/gloves.jpg">
+        Add to Cart
+      </a>
     </div>
   </div>
 
   <footer>
     <p>&copy; 2023 MUSCLE TEAR. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Helper functions
+      function getCart() {
+        return JSON.parse(localStorage.getItem("cart")) || [];
+      }
+
+      function saveCart(cart) {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      // Function to add an item to the cart
+      function addToCart(name, price, image) {
+        let cart = getCart();
+        const existingProduct = cart.find(item => item.id === name);
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push({
+            id: name,
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+          });
+        }
+        saveCart(cart);
+        alert(name + " added to cart!");
+      }
+
+      // Attach click event to the Add to Cart button
+      const addToCartButton = document.querySelector(".add-to-cart");
+      if (addToCartButton) {
+        addToCartButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          const productName = this.getAttribute("data-name");
+          const productPrice = this.getAttribute("data-price");
+          const productImage = this.getAttribute("data-image");
+          addToCart(productName, productPrice, productImage);
+        });
+      }
+    });
+  </script>
 </body>
 </html>

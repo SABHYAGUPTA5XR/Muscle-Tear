@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +17,7 @@
       margin: 0;
       padding: 0;
     }
+
     /* Navigation Bar (consistent with other pages) */
     header {
       background: #000;
@@ -27,30 +29,36 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .logo {
       font-size: 24px;
       font-weight: bold;
       color: red;
     }
+
     nav ul {
       list-style: none;
       display: flex;
       margin: 0;
       padding: 0;
     }
+
     nav ul li {
       margin-left: 20px;
     }
+
     nav ul li a {
       text-decoration: none;
       color: #fff;
       font-size: 16px;
       transition: 0.3s;
     }
+
     nav ul li a:hover,
     nav ul li a.active {
       color: red;
     }
+
     /* Container for Product Description */
     .container {
       max-width: 800px;
@@ -61,50 +69,63 @@
       display: flex;
       flex-wrap: wrap;
     }
+
     .product-image {
       flex: 1;
       margin-right: 20px;
       text-align: center;
     }
+
     .product-image img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
     }
+
     .product-details {
       flex: 2;
     }
+
     .product-title {
       font-size: 2em;
       color: red;
       margin-bottom: 10px;
     }
+
     .product-description {
       font-size: 1.2em;
       line-height: 1.5;
       margin-bottom: 20px;
     }
+
     .product-info {
       margin-bottom: 20px;
     }
+
     .product-info p {
       margin: 8px 0;
       font-size: 1.1em;
     }
+
     .pricing {
       margin-bottom: 15px;
     }
-    .price, .final-price {
+
+    .price,
+    .final-price {
       margin: 5px 0;
       font-size: 1.5em;
     }
+
     .rating-quantity {
       margin-top: 10px;
       margin-bottom: 20px;
     }
+
     .rating {
       margin-bottom: 10px;
     }
+
     .buy-button {
       display: inline-block;
       padding: 10px 20px;
@@ -115,9 +136,11 @@
       font-size: 1.2em;
       transition: background-color 0.3s;
     }
+
     .buy-button:hover {
       background-color: #900;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -126,15 +149,18 @@
       bottom: 0;
       width: 100%;
     }
+
     footer p {
       color: #111;
       margin: 0;
     }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
       }
+
       .product-image {
         margin-right: 0;
         margin-bottom: 20px;
@@ -142,6 +168,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <header>
@@ -171,7 +198,8 @@
         and fitness enthusiasts.
       </p>
       <div class="product-info">
-        <p><strong>Protein Content:</strong> 24g of protein per serving (from whey concentrate, isolate, or plant-based sources).</p>
+        <p><strong>Protein Content:</strong> 24g of protein per serving (from whey concentrate, isolate, or
+          plant-based sources).</p>
         <p><strong>How to Use:</strong></p>
         <ul>
           <li>Mix 1 scoop (30g) with 250ml of water or milk in a gym shaker.</li>
@@ -187,12 +215,62 @@
       <div class="rating-quantity">
         <p class="rating">Rating: ★★★★☆</p>
       </div>
-      <a href="#" class="buy-button">Buy Now</a>
+      <!-- Updated button with data attributes -->
+      <a href="#" class="buy-button add-to-cart" data-name="Protein Supplement" data-price="₹2,499"
+        data-image="assets/images/protein.jpg">
+        Add to Cart
+      </a>
     </div>
   </div>
 
   <footer>
     <p>&copy; 2023 MUSCLE TEAR. All rights reserved.</p>
   </footer>
+
+  <!-- Inline Script for Cart Functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Helper functions
+      function getCart() {
+        return JSON.parse(localStorage.getItem("cart")) || [];
+      }
+
+      function saveCart(cart) {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      // Function to add an item to the cart
+      function addToCart(name, price, image) {
+        let cart = getCart();
+        const existingProduct = cart.find(item => item.id === name);
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push({
+            id: name,
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+          });
+        }
+        saveCart(cart);
+        alert(name + " added to cart!");
+      }
+
+      // Attach click event to the Add to Cart button
+      const addToCartButton = document.querySelector(".add-to-cart");
+      if (addToCartButton) {
+        addToCartButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          const productName = this.getAttribute("data-name");
+          const productPrice = this.getAttribute("data-price");
+          const productImage = this.getAttribute("data-image");
+          addToCart(productName, productPrice, productImage);
+        });
+      }
+    });
+  </script>
 </body>
+
 </html>

@@ -506,3 +506,59 @@ body[data-theme="light"] .btn:hover {
     color: #111;
     margin: 0;
   }
+
+/* testimonials on hero section */
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: red;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    flex: 1;
+    transition: transform 0.3s;
+  }
+  
+  .testimonial:hover {
+    transform: scale(1.05);
+  }
+  
+  .testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial h3 {
+    font-size: 1.2em;
+    color: red;
+    margin: 0;
+  }
+  
