@@ -346,6 +346,13 @@ nav ul li a:hover,
     border-radius: 5px;
 }
 
+.cart footer{
+    /* margin-top: 20vh; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .btn.remove-btn {
     background: red;
     color: #fff;
@@ -485,3 +492,17 @@ body[data-theme="light"] .btn:hover {
     flex-direction: column;
     justify-content: center;
 }
+
+ /* footer Section */
+ footer {
+    text-align: center;
+    padding: 20px;
+    background-color: red;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  footer p {
+    color: #111;
+    margin: 0;
+  }
